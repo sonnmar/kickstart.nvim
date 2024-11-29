@@ -1,14 +1,12 @@
 return {
+
+  -- colorscheme --
   {
-    -- colorscheme --
-    'catppuccin/nvim',
-    name = 'catppuccin',
+    'EdenEast/nightfox.nvim',
     priority = 1000,
 
     config = function()
-      -- Configuration main colorscheme
-      require('catppuccin').setup {
-        flavour = 'macchiato',
+      require('nightfox').setup {
         options = {
           transparent = false,
           styles = {
@@ -17,8 +15,7 @@ return {
         },
       }
 
-      -- set vim colorscheme
-      vim.cmd.colorscheme 'catppuccin'
+      vim.cmd.colorscheme 'nordfox'
     end,
   },
 
@@ -32,7 +29,7 @@ return {
     config = function()
       require('lualine').setup {
         options = {
-          theme = 'catppuccin',
+          theme = 'nordfox',
           icons_enable = true,
           always_divide_middle = true,
           component_separators = { left = '', right = '' },
